@@ -1,5 +1,5 @@
 //
-//  PLFViewController.h
+//  PLFClipView.h
 //  CrossFade
 //
 //  Created by Dan Bretl on 4/16/13.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PLFViewController : UIViewController
+@interface PLFClipView : UIView
+
+@property (nonatomic, strong) UIScrollView * scrollView;
 
 @end

@@ -16,9 +16,26 @@
 		32060FFB171DE31700CB101A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 32060FFA171DE31700CB101A /* Default.png */; };
 		32060FFD171DE31700CB101A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32060FFC171DE31700CB101A /* Default@2x.png */; };
 		32060FFF171DE31700CB101A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32060FFE171DE31700CB101A /* Default-568h@2x.png */; };
-		32061002171DE31700CB101A /* PLFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32061001171DE31700CB101A /* PLFViewController.m */; };
-		32061005171DE31700CB101A /* PLFViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32061003171DE31700CB101A /* PLFViewController_iPhone.xib */; };
-		32061008171DE31700CB101A /* PLFViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32061006171DE31700CB101A /* PLFViewController_iPad.xib */; };
+		32061002171DE31700CB101A /* PLFScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32061001171DE31700CB101A /* PLFScrollViewController.m */; };
+		32061005171DE31700CB101A /* PLFScrollViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32061003171DE31700CB101A /* PLFScrollViewController_iPhone.xib */; };
+		32061008171DE31700CB101A /* PLFScrollViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32061006171DE31700CB101A /* PLFScrollViewController_iPad.xib */; };
+		3206101B171DE53F00CB101A /* img3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32061017171DE53F00CB101A /* img3.jpg */; };
+		3206101C171DE53F00CB101A /* img0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32061018171DE53F00CB101A /* img0.jpg */; };
+		3206101D171DE53F00CB101A /* img2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32061019171DE53F00CB101A /* img2.jpg */; };
+		3206101E171DE53F00CB101A /* img1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3206101A171DE53F00CB101A /* img1.jpg */; };
+		32061021171DE8CA00CB101A /* PLFClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32061020171DE8CA00CB101A /* PLFClipView.m */; };
+		32061024171E130E00CB101A /* overlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32061023171E130E00CB101A /* overlay@2x.png */; };
+		32061030171E17B500CB101A /* test1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32061025171E17B400CB101A /* test1.jpg */; };
+		32061031171E17B500CB101A /* test2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32061026171E17B400CB101A /* test2.jpg */; };
+		32061032171E17B500CB101A /* test3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32061027171E17B400CB101A /* test3.jpg */; };
+		32061033171E17B500CB101A /* test4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32061028171E17B400CB101A /* test4.jpg */; };
+		32061034171E17B500CB101A /* test5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32061029171E17B400CB101A /* test5.jpg */; };
+		32061035171E17B500CB101A /* test6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3206102A171E17B400CB101A /* test6.jpg */; };
+		32061036171E17B500CB101A /* test7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3206102B171E17B400CB101A /* test7.jpg */; };
+		32061037171E17B500CB101A /* test8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3206102C171E17B400CB101A /* test8.jpg */; };
+		32061038171E17B500CB101A /* test9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3206102D171E17B400CB101A /* test9.jpg */; };
+		32061039171E17B500CB101A /* test10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3206102E171E17B400CB101A /* test10.jpg */; };
+		3206103A171E17B500CB101A /* test11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3206102F171E17B400CB101A /* test11.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,10 +52,28 @@
 		32060FFA171DE31700CB101A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		32060FFC171DE31700CB101A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		32060FFE171DE31700CB101A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		32061000171DE31700CB101A /* PLFViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLFViewController.h; sourceTree = "<group>"; };
-		32061001171DE31700CB101A /* PLFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLFViewController.m; sourceTree = "<group>"; };
-		32061004171DE31700CB101A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PLFViewController_iPhone.xib; sourceTree = "<group>"; };
-		32061007171DE31700CB101A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PLFViewController_iPad.xib; sourceTree = "<group>"; };
+		32061000171DE31700CB101A /* PLFScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLFScrollViewController.h; sourceTree = "<group>"; };
+		32061001171DE31700CB101A /* PLFScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLFScrollViewController.m; sourceTree = "<group>"; };
+		32061004171DE31700CB101A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PLFScrollViewController_iPhone.xib; sourceTree = "<group>"; };
+		32061007171DE31700CB101A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PLFScrollViewController_iPad.xib; sourceTree = "<group>"; };
+		32061017171DE53F00CB101A /* img3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img3.jpg; sourceTree = "<group>"; };
+		32061018171DE53F00CB101A /* img0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img0.jpg; sourceTree = "<group>"; };
+		32061019171DE53F00CB101A /* img2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img2.jpg; sourceTree = "<group>"; };
+		3206101A171DE53F00CB101A /* img1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img1.jpg; sourceTree = "<group>"; };
+		3206101F171DE8CA00CB101A /* PLFClipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLFClipView.h; sourceTree = "<group>"; };
+		32061020171DE8CA00CB101A /* PLFClipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLFClipView.m; sourceTree = "<group>"; };
+		32061023171E130E00CB101A /* overlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "overlay@2x.png"; sourceTree = "<group>"; };
+		32061025171E17B400CB101A /* test1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test1.jpg; sourceTree = "<group>"; };
+		32061026171E17B400CB101A /* test2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test2.jpg; sourceTree = "<group>"; };
+		32061027171E17B400CB101A /* test3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test3.jpg; sourceTree = "<group>"; };
+		32061028171E17B400CB101A /* test4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test4.jpg; sourceTree = "<group>"; };
+		32061029171E17B400CB101A /* test5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test5.jpg; sourceTree = "<group>"; };
+		3206102A171E17B400CB101A /* test6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test6.jpg; sourceTree = "<group>"; };
+		3206102B171E17B400CB101A /* test7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test7.jpg; sourceTree = "<group>"; };
+		3206102C171E17B400CB101A /* test8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test8.jpg; sourceTree = "<group>"; };
+		3206102D171E17B400CB101A /* test9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test9.jpg; sourceTree = "<group>"; };
+		3206102E171E17B400CB101A /* test10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test10.jpg; sourceTree = "<group>"; };
+		3206102F171E17B400CB101A /* test11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test11.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,10 +122,14 @@
 			children = (
 				32060FF7171DE31700CB101A /* PLFAppDelegate.h */,
 				32060FF8171DE31700CB101A /* PLFAppDelegate.m */,
-				32061000171DE31700CB101A /* PLFViewController.h */,
-				32061001171DE31700CB101A /* PLFViewController.m */,
-				32061003171DE31700CB101A /* PLFViewController_iPhone.xib */,
-				32061006171DE31700CB101A /* PLFViewController_iPad.xib */,
+				32061000171DE31700CB101A /* PLFScrollViewController.h */,
+				32061001171DE31700CB101A /* PLFScrollViewController.m */,
+				32061003171DE31700CB101A /* PLFScrollViewController_iPhone.xib */,
+				32061006171DE31700CB101A /* PLFScrollViewController_iPad.xib */,
+				3206101F171DE8CA00CB101A /* PLFClipView.h */,
+				32061020171DE8CA00CB101A /* PLFClipView.m */,
+				32061016171DE42700CB101A /* Images */,
+				32061022171E12FF00CB101A /* design */,
 				32060FEF171DE31700CB101A /* Supporting Files */,
 			);
 			path = CrossFade;
@@ -108,6 +147,36 @@
 				32060FFE171DE31700CB101A /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		32061016171DE42700CB101A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				32061018171DE53F00CB101A /* img0.jpg */,
+				3206101A171DE53F00CB101A /* img1.jpg */,
+				32061019171DE53F00CB101A /* img2.jpg */,
+				32061017171DE53F00CB101A /* img3.jpg */,
+				32061025171E17B400CB101A /* test1.jpg */,
+				32061026171E17B400CB101A /* test2.jpg */,
+				32061027171E17B400CB101A /* test3.jpg */,
+				32061028171E17B400CB101A /* test4.jpg */,
+				32061029171E17B400CB101A /* test5.jpg */,
+				3206102A171E17B400CB101A /* test6.jpg */,
+				3206102B171E17B400CB101A /* test7.jpg */,
+				3206102C171E17B400CB101A /* test8.jpg */,
+				3206102D171E17B400CB101A /* test9.jpg */,
+				3206102E171E17B400CB101A /* test10.jpg */,
+				3206102F171E17B400CB101A /* test11.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		32061022171E12FF00CB101A /* design */ = {
+			isa = PBXGroup;
+			children = (
+				32061023171E130E00CB101A /* overlay@2x.png */,
+			);
+			name = design;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,8 +235,24 @@
 				32060FFB171DE31700CB101A /* Default.png in Resources */,
 				32060FFD171DE31700CB101A /* Default@2x.png in Resources */,
 				32060FFF171DE31700CB101A /* Default-568h@2x.png in Resources */,
-				32061005171DE31700CB101A /* PLFViewController_iPhone.xib in Resources */,
-				32061008171DE31700CB101A /* PLFViewController_iPad.xib in Resources */,
+				32061005171DE31700CB101A /* PLFScrollViewController_iPhone.xib in Resources */,
+				32061008171DE31700CB101A /* PLFScrollViewController_iPad.xib in Resources */,
+				3206101B171DE53F00CB101A /* img3.jpg in Resources */,
+				3206101C171DE53F00CB101A /* img0.jpg in Resources */,
+				3206101D171DE53F00CB101A /* img2.jpg in Resources */,
+				3206101E171DE53F00CB101A /* img1.jpg in Resources */,
+				32061024171E130E00CB101A /* overlay@2x.png in Resources */,
+				32061030171E17B500CB101A /* test1.jpg in Resources */,
+				32061031171E17B500CB101A /* test2.jpg in Resources */,
+				32061032171E17B500CB101A /* test3.jpg in Resources */,
+				32061033171E17B500CB101A /* test4.jpg in Resources */,
+				32061034171E17B500CB101A /* test5.jpg in Resources */,
+				32061035171E17B500CB101A /* test6.jpg in Resources */,
+				32061036171E17B500CB101A /* test7.jpg in Resources */,
+				32061037171E17B500CB101A /* test8.jpg in Resources */,
+				32061038171E17B500CB101A /* test9.jpg in Resources */,
+				32061039171E17B500CB101A /* test10.jpg in Resources */,
+				3206103A171E17B500CB101A /* test11.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,7 +265,8 @@
 			files = (
 				32060FF5171DE31700CB101A /* main.m in Sources */,
 				32060FF9171DE31700CB101A /* PLFAppDelegate.m in Sources */,
-				32061002171DE31700CB101A /* PLFViewController.m in Sources */,
+				32061002171DE31700CB101A /* PLFScrollViewController.m in Sources */,
+				32061021171DE8CA00CB101A /* PLFClipView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,20 +281,20 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		32061003171DE31700CB101A /* PLFViewController_iPhone.xib */ = {
+		32061003171DE31700CB101A /* PLFScrollViewController_iPhone.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				32061004171DE31700CB101A /* en */,
 			);
-			name = PLFViewController_iPhone.xib;
+			name = PLFScrollViewController_iPhone.xib;
 			sourceTree = "<group>";
 		};
-		32061006171DE31700CB101A /* PLFViewController_iPad.xib */ = {
+		32061006171DE31700CB101A /* PLFScrollViewController_iPad.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				32061007171DE31700CB101A /* en */,
 			);
-			name = PLFViewController_iPad.xib;
+			name = PLFScrollViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -275,10 +361,12 @@
 		3206100C171DE31700CB101A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CrossFade/CrossFade-Prefix.pch";
 				INFOPLIST_FILE = "CrossFade/CrossFade-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -286,10 +374,12 @@
 		3206100D171DE31700CB101A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CrossFade/CrossFade-Prefix.pch";
 				INFOPLIST_FILE = "CrossFade/CrossFade-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

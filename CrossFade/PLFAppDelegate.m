@@ -8,7 +8,7 @@
 
 #import "PLFAppDelegate.h"
 
-#import "PLFViewController.h"
+#import "PLFScrollViewController.h"
 
 @implementation PLFAppDelegate
 
@@ -17,9 +17,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        self.viewController = [[PLFViewController alloc] initWithNibName:@"PLFViewController_iPhone" bundle:nil];
+        self.viewController = [[PLFScrollViewController alloc] initWithNibName:@"PLFScrollViewController_iPhone" bundle:nil];
     } else {
-        self.viewController = [[PLFViewController alloc] initWithNibName:@"PLFViewController_iPad" bundle:nil];
+        self.viewController = [[PLFScrollViewController alloc] initWithNibName:@"PLFScrollViewController_iPad" bundle:nil];
     }
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];

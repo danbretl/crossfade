@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class PLFViewController;
+@class PLFScrollViewController;
 
 @interface PLFAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) PLFViewController *viewController;
+@property (strong, nonatomic) PLFScrollViewController *viewController;
 
 @end
