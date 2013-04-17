@@ -49,6 +49,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.overlayImageView.image = [[UIImage imageNamed:@"overlay"] resizableImageWithCapInsets:UIEdgeInsetsMake(200.0, 0, 200.0, 0)];
+    
     self.controlsContainer.alpha = 0.0;
     [self setControlLabelsTextToDataValues];
         

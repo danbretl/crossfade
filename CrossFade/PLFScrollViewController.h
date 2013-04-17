@@ -29,4 +29,6 @@
 @property (nonatomic, weak) IBOutlet UILabel * movementSuppressionFactorLabel;
 @property (nonatomic, weak) IBOutlet UILabel * alphaChangeBufferPercentageLabel;
 
+@property (nonatomic, weak) IBOutlet UIImageView * overlayImageView;
+
 @end

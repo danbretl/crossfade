@@ -239,7 +239,6 @@
 								<string key="NSFrame">{{20, 57}, {280, 434}}</string>
 								<reference key="NSSuperview" ref="862441297"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -400,6 +399,14 @@
 						<reference key="destination" ref="862441297"/>
 					</object>
 					<int key="connectionID">64</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">overlayImageView</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="215271244"/>
+					</object>
+					<int key="connectionID">67</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletCollectionConnection" key="connection">
@@ -629,7 +636,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">66</int>
+			<int key="maxID">67</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -665,6 +672,7 @@
 						<string key="controlsContainer">UIView</string>
 						<string key="movementSuppressionFactorLabel">UILabel</string>
 						<string key="movementSuppressionFactorPanGestureRecognizer">UIPanGestureRecognizer</string>
+						<string key="overlayImageView">UIImageView</string>
 						<string key="scrollView">UIScrollView</string>
 						<string key="scrollViewTouch">UIScrollView</string>
 						<string key="submitTapGestureRecognizer">UITapGestureRecognizer</string>
@@ -693,6 +701,10 @@
 						<object class="IBToOneOutletInfo" key="movementSuppressionFactorPanGestureRecognizer">
 							<string key="name">movementSuppressionFactorPanGestureRecognizer</string>
 							<string key="candidateClassName">UIPanGestureRecognizer</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="overlayImageView">
+							<string key="name">overlayImageView</string>
+							<string key="candidateClassName">UIImageView</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="scrollView">
 							<string key="name">scrollView</string>
