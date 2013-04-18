@@ -36,6 +36,7 @@
 		323079D1171F2CA9005E2E24 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 323079D0171F2CA9005E2E24 /* icon@2x.png */; };
 		323079D3171F2CB3005E2E24 /* icon~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 323079D2171F2CB3005E2E24 /* icon~ipad.png */; };
 		323079D5171F2CB6005E2E24 /* icon@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 323079D4171F2CB6005E2E24 /* icon@2x~ipad.png */; };
+		32513912172051DB0094F9E4 /* PLFCrossFadeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32513911172051DB0094F9E4 /* PLFCrossFadeView.m */; };
 		3290268D17203EC400A7784F /* overlay_sans_page_text@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3290268C17203EC400A7784F /* overlay_sans_page_text@2x.png */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,8 @@
 		323079D0171F2CA9005E2E24 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../icon@2x.png"; sourceTree = "<group>"; };
 		323079D2171F2CB3005E2E24 /* icon~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon~ipad.png"; path = "../icon~ipad.png"; sourceTree = "<group>"; };
 		323079D4171F2CB6005E2E24 /* icon@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x~ipad.png"; path = "../icon@2x~ipad.png"; sourceTree = "<group>"; };
+		32513910172051DB0094F9E4 /* PLFCrossFadeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLFCrossFadeView.h; sourceTree = "<group>"; };
+		32513911172051DB0094F9E4 /* PLFCrossFadeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLFCrossFadeView.m; sourceTree = "<group>"; };
 		3290268C17203EC400A7784F /* overlay_sans_page_text@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "overlay_sans_page_text@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +130,8 @@
 				32060FF8171DE31700CB101A /* PLFAppDelegate.m */,
 				32061000171DE31700CB101A /* PLFScrollViewController.h */,
 				32061001171DE31700CB101A /* PLFScrollViewController.m */,
+				32513910172051DB0094F9E4 /* PLFCrossFadeView.h */,
+				32513911172051DB0094F9E4 /* PLFCrossFadeView.m */,
 				32061003171DE31700CB101A /* PLFScrollViewController_iPhone.xib */,
 				32061006171DE31700CB101A /* PLFScrollViewController_iPad.xib */,
 				32061016171DE42700CB101A /* Images */,
@@ -269,6 +274,7 @@
 				32060FF5171DE31700CB101A /* main.m in Sources */,
 				32060FF9171DE31700CB101A /* PLFAppDelegate.m in Sources */,
 				32061002171DE31700CB101A /* PLFScrollViewController.m in Sources */,
+				32513912172051DB0094F9E4 /* PLFCrossFadeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
