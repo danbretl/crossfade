@@ -97,7 +97,7 @@
     
     self.crossFadeView.pageControl.hidden = NO;
     self.crossFadeView.pageControl.center = CGPointMake(self.view.center.x, self.view.bounds.size.height - 87.0);
-    self.crossFadeView.autoPagingDuration = 10.0;
+    self.crossFadeView.autoPagingDuration = 5.0;
     self.crossFadeView.autoPagingShouldLoop = YES;
     self.crossFadeView.autoPagingShouldStopOnUserInteraction = YES;
     
@@ -154,7 +154,7 @@
     [UIView animateWithDuration:animatedToStart ? 0.15 : 0.0 delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
         self.controlsContainer.alpha = 1.0;
     } completion:^(BOOL finished) {
-        [self performSelector:@selector(setControlLabelsInvisibleIfUntouched) withObject:nil afterDelay:5.0];
+        [self performSelector:@selector(setControlLabelsInvisibleIfUntouched) withObject:nil afterDelay:2.0];
     }];
 }
 
