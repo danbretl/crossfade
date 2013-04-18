@@ -68,7 +68,6 @@
     self.foregroundContentViewsContainer = [[UIView alloc] initWithFrame:self.scrollViewForeground.bounds];
     [self.scrollViewForeground addSubview:self.foregroundContentViewsContainer];
     
-    self.clipView.scrollView = self.scrollViewBackground;
     if (self.backgroundContentViews.count == 0) {
         NSMutableArray * backgroundContentViews = [NSMutableArray array];
         NSMutableArray * foregroundContentViews = [NSMutableArray array];

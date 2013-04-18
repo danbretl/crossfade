@@ -19,7 +19,6 @@
 		32061002171DE31700CB101A /* PLFScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32061001171DE31700CB101A /* PLFScrollViewController.m */; };
 		32061005171DE31700CB101A /* PLFScrollViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32061003171DE31700CB101A /* PLFScrollViewController_iPhone.xib */; };
 		32061008171DE31700CB101A /* PLFScrollViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32061006171DE31700CB101A /* PLFScrollViewController_iPad.xib */; };
-		32061021171DE8CA00CB101A /* PLFClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32061020171DE8CA00CB101A /* PLFClipView.m */; };
 		32061024171E130E00CB101A /* overlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32061023171E130E00CB101A /* overlay@2x.png */; };
 		32061030171E17B500CB101A /* test1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32061025171E17B400CB101A /* test1.jpg */; };
 		32061031171E17B500CB101A /* test2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32061026171E17B400CB101A /* test2.jpg */; };
@@ -58,8 +57,6 @@
 		32061001171DE31700CB101A /* PLFScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLFScrollViewController.m; sourceTree = "<group>"; };
 		32061004171DE31700CB101A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PLFScrollViewController_iPhone.xib; sourceTree = "<group>"; };
 		32061007171DE31700CB101A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PLFScrollViewController_iPad.xib; sourceTree = "<group>"; };
-		3206101F171DE8CA00CB101A /* PLFClipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLFClipView.h; sourceTree = "<group>"; };
-		32061020171DE8CA00CB101A /* PLFClipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLFClipView.m; sourceTree = "<group>"; };
 		32061023171E130E00CB101A /* overlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "overlay@2x.png"; sourceTree = "<group>"; };
 		32061025171E17B400CB101A /* test1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test1.jpg; sourceTree = "<group>"; };
 		32061026171E17B400CB101A /* test2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test2.jpg; sourceTree = "<group>"; };
@@ -132,8 +129,6 @@
 				32061001171DE31700CB101A /* PLFScrollViewController.m */,
 				32061003171DE31700CB101A /* PLFScrollViewController_iPhone.xib */,
 				32061006171DE31700CB101A /* PLFScrollViewController_iPad.xib */,
-				3206101F171DE8CA00CB101A /* PLFClipView.h */,
-				32061020171DE8CA00CB101A /* PLFClipView.m */,
 				32061016171DE42700CB101A /* Images */,
 				32061022171E12FF00CB101A /* design */,
 				32060FEF171DE31700CB101A /* Supporting Files */,
@@ -274,7 +269,6 @@
 				32060FF5171DE31700CB101A /* main.m in Sources */,
 				32060FF9171DE31700CB101A /* PLFAppDelegate.m in Sources */,
 				32061002171DE31700CB101A /* PLFScrollViewController.m in Sources */,
-				32061021171DE8CA00CB101A /* PLFClipView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
