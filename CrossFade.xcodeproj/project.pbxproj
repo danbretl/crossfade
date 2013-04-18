@@ -98,7 +98,6 @@
 		32060FDC171DE31700CB101A = {
 			isa = PBXGroup;
 			children = (
-				323079CC171F2570005E2E24 /* MessageUI.framework */,
 				32060FEE171DE31700CB101A /* CrossFade */,
 				32060FE7171DE31700CB101A /* Frameworks */,
 				32060FE6171DE31700CB101A /* Products */,
@@ -116,6 +115,7 @@
 		32060FE7171DE31700CB101A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				323079CC171F2570005E2E24 /* MessageUI.framework */,
 				32060FE8171DE31700CB101A /* UIKit.framework */,
 				32060FEA171DE31700CB101A /* Foundation.framework */,
 				32060FEC171DE31700CB101A /* CoreGraphics.framework */,
