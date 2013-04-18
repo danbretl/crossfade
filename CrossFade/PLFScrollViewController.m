@@ -76,6 +76,7 @@
             contentViewHeadlineLabel.shadowOffset = CGSizeMake(0, 1.0);
             contentViewHeadlineLabel.textAlignment = NSTextAlignmentCenter;
             contentViewHeadlineLabel.text = self.imageHeadlines[i % self.imageHeadlines.count];
+            contentViewHeadlineLabel.backgroundColor = [UIColor clearColor];
             UILabel * contentViewDescriptionLabel = [[UILabel alloc] initWithFrame:CGRectMake(25.0, CGRectGetMaxY(contentViewHeadlineLabel.frame), contentViewForeground.bounds.size.width - 25.0 * 2, 28.0)];
             contentViewDescriptionLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
             contentViewDescriptionLabel.textColor = [UIColor whiteColor];
@@ -85,7 +86,6 @@
             contentViewDescriptionLabel.textAlignment = NSTextAlignmentCenter;
             contentViewDescriptionLabel.numberOfLines = 2;
             contentViewDescriptionLabel.text = self.imageDescriptions[i % self.imageDescriptions.count];
-            contentViewHeadlineLabel.backgroundColor = [UIColor clearColor];
             contentViewDescriptionLabel.backgroundColor = [UIColor clearColor];
             
             [contentViewForeground addSubview:contentViewHeadlineLabel];
