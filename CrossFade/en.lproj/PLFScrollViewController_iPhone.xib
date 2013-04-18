@@ -71,6 +71,21 @@
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
+					<object class="IBUIImageView" id="215271244">
+						<reference key="NSNextResponder" ref="774585933"/>
+						<int key="NSvFlags">274</int>
+						<string key="NSFrameSize">{320, 548}</string>
+						<reference key="NSSuperview" ref="774585933"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="862441297"/>
+						<string key="NSReuseIdentifierKey">_NS:9</string>
+						<bool key="IBUIUserInteractionEnabled">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<object class="NSCustomResource" key="IBUIImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">overlay@2x.png</string>
+						</object>
+					</object>
 					<object class="IBUIScrollView" id="960144042">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">274</int>
@@ -86,21 +101,6 @@
 						<bool key="IBUIPagingEnabled">YES</bool>
 						<bool key="IBUIShowsHorizontalScrollIndicator">NO</bool>
 						<bool key="IBUIShowsVerticalScrollIndicator">NO</bool>
-					</object>
-					<object class="IBUIImageView" id="215271244">
-						<reference key="NSNextResponder" ref="774585933"/>
-						<int key="NSvFlags">274</int>
-						<string key="NSFrameSize">{320, 548}</string>
-						<reference key="NSSuperview" ref="774585933"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="862441297"/>
-						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<bool key="IBUIUserInteractionEnabled">NO</bool>
-						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<object class="NSCustomResource" key="IBUIImage">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">overlay@2x.png</string>
-						</object>
 					</object>
 					<object class="IBUIView" id="862441297">
 						<reference key="NSNextResponder" ref="774585933"/>
@@ -239,6 +239,7 @@
 								<string key="NSFrame">{{20, 57}, {280, 434}}</string>
 								<reference key="NSSuperview" ref="862441297"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -330,27 +331,11 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">scrollView</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="639185665"/>
-					</object>
-					<int key="connectionID">25</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">clipView</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="462827393"/>
 					</object>
 					<int key="connectionID">28</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">scrollViewTouch</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="960144042"/>
-					</object>
-					<int key="connectionID">38</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
@@ -407,6 +392,22 @@
 						<reference key="destination" ref="215271244"/>
 					</object>
 					<int key="connectionID">67</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">scrollViewBackground</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="639185665"/>
+					</object>
+					<int key="connectionID">68</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">scrollViewForeground</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="960144042"/>
+					</object>
+					<int key="connectionID">69</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletCollectionConnection" key="connection">
@@ -527,8 +528,8 @@
 						<reference key="object" ref="774585933"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="462827393"/>
-							<reference ref="215271244"/>
 							<reference ref="960144042"/>
+							<reference ref="215271244"/>
 							<reference ref="862441297"/>
 						</array>
 						<reference key="parent" ref="0"/>
@@ -636,7 +637,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">67</int>
+			<int key="maxID">69</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -673,8 +674,8 @@
 						<string key="movementSuppressionFactorLabel">UILabel</string>
 						<string key="movementSuppressionFactorPanGestureRecognizer">UIPanGestureRecognizer</string>
 						<string key="overlayImageView">UIImageView</string>
-						<string key="scrollView">UIScrollView</string>
-						<string key="scrollViewTouch">UIScrollView</string>
+						<string key="scrollViewBackground">UIScrollView</string>
+						<string key="scrollViewForeground">UIScrollView</string>
 						<string key="submitTapGestureRecognizer">UITapGestureRecognizer</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
@@ -706,12 +707,12 @@
 							<string key="name">overlayImageView</string>
 							<string key="candidateClassName">UIImageView</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="scrollView">
-							<string key="name">scrollView</string>
+						<object class="IBToOneOutletInfo" key="scrollViewBackground">
+							<string key="name">scrollViewBackground</string>
 							<string key="candidateClassName">UIScrollView</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="scrollViewTouch">
-							<string key="name">scrollViewTouch</string>
+						<object class="IBToOneOutletInfo" key="scrollViewForeground">
+							<string key="name">scrollViewForeground</string>
 							<string key="candidateClassName">UIScrollView</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="submitTapGestureRecognizer">
