@@ -25,8 +25,13 @@
 
 @property (nonatomic, readonly) UIPageControl * pageControl; // Hidden by default. If made visible, should also position it as desired. userInteractionEnabled = NO by default as well.
 
+@property (nonatomic) NSInteger currentPage;
+
 - (void)startAutoPaging;
 - (void)stopAutoPaging;
+@property (nonatomic) BOOL autoPagingDuration; // Defaults to 10.0
+@property (nonatomic) BOOL autoPagingShouldLoop; // Defaults to YES
+@property (nonatomic) BOOL autoPagingShouldStopOnUserInteraction; // Defaults to YES
 
 @property (nonatomic, weak) id<PLFCrossFadeViewDelegate> delegate;
 

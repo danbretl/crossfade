@@ -10,9 +10,9 @@
 
 const float kBackgroundMovementSuppressionDefault = 1.0;
 const float kBackgroundAlphaChangeDelayDefault = 0.0;
-
-#define kMovementSuppressionFactorDefault 3.0
-#define kAlphaChangeBufferPercentageDefault 0.0
+const float kAutoPagingDurationDefault = 10.0;
+const BOOL kAutoPagingShouldLoopDefault = YES;
+const BOOL kAutoPagingShouldStopOnUserInteractionDefault = YES;
 
 @interface PLFCrossFadeView()
 - (void)setup;
@@ -48,14 +48,19 @@ const float kBackgroundAlphaChangeDelayDefault = 0.0;
 
 - (void)setup {
     
-    self.backgroundMovementSuppression = kMovementSuppressionFactorDefault;
-    self.backgroundAlphaChangeDelay = kAlphaChangeBufferPercentageDefault;
+    self.backgroundMovementSuppression = kBackgroundMovementSuppressionDefault;
+    self.backgroundAlphaChangeDelay = kBackgroundAlphaChangeDelayDefault;
+    
+    self.autoPagingDuration = kAutoPagingDurationDefault;
+    self.autoPagingShouldLoop = kAutoPagingShouldLoopDefault;
+    self.autoPagingShouldStopOnUserInteraction = kAutoPagingShouldStopOnUserInteractionDefault;
+    
     self.backgroundContentViews = [NSMutableArray array];
     self.foregroundContentViews = [NSMutableArray array];
     
     self.backgroundScrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
     self.backgroundScrollView.delegate = self;
-    self.backgroundScrollView.pagingEnabled = YES;
+    self.backgroundScrollView.pagingEnabled = NO;
     self.backgroundScrollView.clipsToBounds = NO;
     self.backgroundScrollView.showsHorizontalScrollIndicator = NO;
     self.backgroundScrollView.showsVerticalScrollIndicator = NO;
@@ -177,7 +182,7 @@ const float kBackgroundAlphaChangeDelayDefault = 0.0;
 
 - (void)startAutoPaging {
     [self.autoPagingTimer invalidate];
-    self.autoPagingTimer = [NSTimer scheduledTimerWithTimeInterval:10.0 target:self selector:@selector(autoPagingTimerFired:) userInfo:nil repeats:YES];
+    self.autoPagingTimer = [NSTimer scheduledTimerWithTimeInterval:self.autoPagingDuration target:self selector:@selector(autoPagingTimerFired:) userInfo:nil repeats:self.autoPagingShouldLoop];
 }
 
 - (void)stopAutoPaging {
@@ -186,16 +191,52 @@ const float kBackgroundAlphaChangeDelayDefault = 0.0;
 }
 
 - (void)autoPagingTimerFired:(NSTimer *)timer {
-    
+    NSLog(@"%@ %@", NSStringFromClass(self.class), NSStringFromSelector(_cmd));
+    if (!(self.foregroundScrollView.isTracking || self.foregroundScrollView.isDecelerating)) {
+        NSInteger scrollToPage = self.currentPage + 1;
+        if (scrollToPage >= self.contentViewsCount && self.autoPagingShouldLoop)
+            scrollToPage = 0;
+        [self scrollToPage:scrollToPage animated:YES];
+    }
+}
+
+- (void)scrollToPage:(NSInteger)pageIndex animated:(BOOL)animated {
+    NSLog(@"%@ %@ %d", NSStringFromClass(self.class), NSStringFromSelector(_cmd), pageIndex);
+    if (pageIndex >= 0 && pageIndex < self.contentViewsCount) {
+        [self.foregroundScrollView setContentOffset:CGPointMake(pageIndex * self.foregroundScrollView.bounds.size.width, self.foregroundScrollView.contentOffset.y) animated:animated];
+    }
+}
+
+- (void)setAutoPagingDuration:(BOOL)autoPagingDuration {
+    if (_autoPagingDuration != autoPagingDuration) {
+        _autoPagingDuration = autoPagingDuration;
+        if (self.autoPagingTimer.isValid) {
+            [self stopAutoPaging];
+            [self startAutoPaging];
+        }
+    }
+}
+
+- (void)setAutoPagingShouldLoop:(BOOL)autoPagingShouldLoop {
+    if (_autoPagingShouldLoop != autoPagingShouldLoop) {
+        _autoPagingShouldLoop = autoPagingShouldLoop;
+        if (self.autoPagingTimer.isValid) {
+            [self stopAutoPaging];
+            [self startAutoPaging];
+        }
+    }
 }
 
 #pragma mark UIScrollViewDelegate
 
+- (NSInteger)currentPage {
+    return MIN(self.contentViewsCount, MAX(0, roundf(self.foregroundScrollView.contentOffset.x / self.foregroundScrollView.bounds.size.width)));
+}
+
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     if (scrollView == self.foregroundScrollView) {
         self.backgroundScrollView.contentOffset = CGPointMake(self.foregroundScrollView.contentOffset.x / self.backgroundMovementSuppression, self.foregroundScrollView.contentOffset.y);
-        int currentPage = MIN(self.contentViewsCount, MAX(0, roundf(self.foregroundScrollView.contentOffset.x / self.foregroundScrollView.bounds.size.width)));
-        self.pageControl.currentPage = currentPage;
+        self.pageControl.currentPage = self.currentPage;
     } else if (scrollView == self.backgroundScrollView) {
         CGFloat contentOffsetCenterX = self.backgroundScrollView.contentOffset.x + self.backgroundContentViewsSpacing / 2.0 - self.backgroundContentViewsContainer.frame.origin.x;
         CGFloat distanceFromCenter = 0;
@@ -217,6 +258,8 @@ const float kBackgroundAlphaChangeDelayDefault = 0.0;
     [self delegatePerformSelectorIfResponds:_cmd];
 }
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    if (self.autoPagingShouldStopOnUserInteraction)
+        [self stopAutoPaging];
     [self delegatePerformSelectorIfResponds:_cmd];
 }
 - (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {

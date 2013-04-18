@@ -97,6 +97,9 @@
     
     self.crossFadeView.pageControl.hidden = NO;
     self.crossFadeView.pageControl.center = CGPointMake(self.view.center.x, self.view.bounds.size.height - 87.0);
+    self.crossFadeView.autoPagingDuration = 10.0;
+    self.crossFadeView.autoPagingShouldLoop = YES;
+    self.crossFadeView.autoPagingShouldStopOnUserInteraction = YES;
     
     self.crossFadeView.foregroundScrollView.contentOffset = CGPointZero;
     
@@ -113,6 +116,12 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     self.hasAppeared = YES;
+    [self.crossFadeView startAutoPaging];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [self.crossFadeView stopAutoPaging];
 }
 
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
