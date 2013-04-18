@@ -23,8 +23,10 @@
 - (void)removeAllContentViews;
 @property (nonatomic, readonly) NSUInteger contentViewsCount;
 
-//- (void)startAutoPaging;
-//- (void)stopAutoPaging;
+@property (nonatomic, readonly) UIPageControl * pageControl; // Hidden by default. If made visible, should also position it as desired. userInteractionEnabled = NO by default as well.
+
+- (void)startAutoPaging;
+- (void)stopAutoPaging;
 
 @property (nonatomic, weak) id<PLFCrossFadeViewDelegate> delegate;
 

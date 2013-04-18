@@ -18,11 +18,14 @@ const float kBackgroundAlphaChangeDelayDefault = 0.0;
 - (void)setup;
 @property (nonatomic, strong) UIScrollView * backgroundScrollView;
 @property (nonatomic, strong) UIScrollView * foregroundScrollView;
+@property (nonatomic, strong) UIPageControl * pageControl;
 @property (nonatomic, strong) NSMutableArray * backgroundContentViews;
 @property (nonatomic, strong) UIView * backgroundContentViewsContainer;
 @property (nonatomic, strong) NSMutableArray * foregroundContentViews;
 @property (nonatomic, strong) UIView * foregroundContentViewsContainer;
 @property (nonatomic, readonly) CGFloat backgroundContentViewsSpacing;
+@property (nonatomic, strong) NSTimer * autoPagingTimer;
+- (void) autoPagingTimerFired:(NSTimer *)timer;
 @end
 
 @implementation PLFCrossFadeView
@@ -69,6 +72,12 @@ const float kBackgroundAlphaChangeDelayDefault = 0.0;
     
     self.backgroundContentViewsContainer = [[UIView alloc] initWithFrame:self.backgroundScrollView.bounds];
     [self.backgroundScrollView addSubview:self.backgroundContentViewsContainer];
+    
+    self.pageControl = [[UIPageControl alloc] initWithFrame:self.bounds];
+    self.pageControl.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    [self addSubview:self.pageControl];
+    self.pageControl.hidden = YES;
+    self.pageControl.userInteractionEnabled = NO;
     
     self.foregroundContentViewsContainer = [[UIView alloc] initWithFrame:self.foregroundScrollView.bounds];
     [self.foregroundScrollView addSubview:self.foregroundContentViewsContainer];
@@ -131,6 +140,7 @@ const float kBackgroundAlphaChangeDelayDefault = 0.0;
     [self.foregroundContentViewsContainer addSubview:foregroundContentView];
     [self.backgroundContentViewsContainer sendSubviewToBack:backgroundContentView];
     [self.foregroundContentViewsContainer sendSubviewToBack:backgroundContentView];
+    self.pageControl.numberOfPages = self.contentViewsCount;
     [self setNeedsLayout];
 }
 
@@ -163,11 +173,29 @@ const float kBackgroundAlphaChangeDelayDefault = 0.0;
     }
 }
 
+#pragma mark Autopaging
+
+- (void)startAutoPaging {
+    [self.autoPagingTimer invalidate];
+    self.autoPagingTimer = [NSTimer scheduledTimerWithTimeInterval:10.0 target:self selector:@selector(autoPagingTimerFired:) userInfo:nil repeats:YES];
+}
+
+- (void)stopAutoPaging {
+    [self.autoPagingTimer invalidate];
+    self.autoPagingTimer = nil;
+}
+
+- (void)autoPagingTimerFired:(NSTimer *)timer {
+    
+}
+
 #pragma mark UIScrollViewDelegate
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     if (scrollView == self.foregroundScrollView) {
         self.backgroundScrollView.contentOffset = CGPointMake(self.foregroundScrollView.contentOffset.x / self.backgroundMovementSuppression, self.foregroundScrollView.contentOffset.y);
+        int currentPage = MIN(self.contentViewsCount, MAX(0, roundf(self.foregroundScrollView.contentOffset.x / self.foregroundScrollView.bounds.size.width)));
+        self.pageControl.currentPage = currentPage;
     } else if (scrollView == self.backgroundScrollView) {
         CGFloat contentOffsetCenterX = self.backgroundScrollView.contentOffset.x + self.backgroundContentViewsSpacing / 2.0 - self.backgroundContentViewsContainer.frame.origin.x;
         CGFloat distanceFromCenter = 0;

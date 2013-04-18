@@ -55,7 +55,7 @@
     
     self.crossFadeView.backgroundMovementSuppression = kMovementSuppressionFactorDefault;
     self.crossFadeView.backgroundAlphaChangeDelay = kAlphaChangeBufferPercentageDefault;
-    self.crossFadeView.staticView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"overlay_sans_page_text"] resizableImageWithCapInsets:UIEdgeInsetsMake(200.0, 159.0, 200.0, 159.0)]];
+    self.crossFadeView.staticView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"overlay_minimal"] resizableImageWithCapInsets:UIEdgeInsetsMake(200.0, 159.0, 200.0, 159.0)]];
     
     [self setControlLabelsTextToDataValues];
     
@@ -94,6 +94,9 @@
             [self.crossFadeView addBackgroundContentView:contentViewBackground foregroundContentView:contentViewForeground];
         }
     }
+    
+    self.crossFadeView.pageControl.hidden = NO;
+    self.crossFadeView.pageControl.center = CGPointMake(self.view.center.x, self.view.bounds.size.height - 87.0);
     
     self.crossFadeView.foregroundScrollView.contentOffset = CGPointZero;
     
